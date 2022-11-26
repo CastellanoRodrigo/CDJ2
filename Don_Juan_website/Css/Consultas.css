@@ -1,0 +1,237 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Con esta clase nos permite personalizar el fondo*/
+.home{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+
+}
+
+/*Esto es un filtro que esta por encima de la imagen de fondo*/
+.cover{
+    width: 100%;
+    height: 100vh;
+    /*Tiene formato RGBA ya que si usamos "Opacity" se aplica a todos los elementos y solo quiero que se aplique en la imagen*/
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Con esta clase personalizamos la barra de navegacion*/
+.BarraNavegacion{
+    width: 100%;
+    display: flex;
+    /*Es recomendable utilizar multiplos de 8*/
+    height: 90px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 0 24px;
+    box-sizing: border-box;
+    position: fixed;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index: 3;
+}
+
+/*Aca le damos formato al texto de la barra*/
+.BarraNavegacion a{
+    display: inline-flex;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+
+/*Aca le damos formato aL LOGO de la Barra*/
+.BarraNavegacion img{
+    height: 90px;
+}
+
+/*Aca le damos estilo a la barra inferior*/
+.BarraInferior{
+    width: 100%;
+    display: flex;
+    /*Es recomendable utilizar multiplos de 8*/
+    height: 70px;
+    text-align: right;
+    align-items: right;
+    justify-content: flex-end;
+    background-color: black;
+    padding: 0 24px;
+    box-sizing: border-box;
+    position: relative;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index: 3;
+}
+
+/*Aca le damos estilo*/
+.Content{
+    background-color: rgba(217, 217, 217, 0.81);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+    border-radius: 30px;
+    width: 580px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    /*Se pueden linkeare mas fondos desde google fonts*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Content h1 {
+    font-size: 54px;
+}
+
+.coverImagen{
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+}
+
+.ImagenParcela{
+    background-image: url("../../imagenes/Consulta.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 205px;
+    border: 10px;
+    position: relative;
+}
+
+.ImagenParcela::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.63);
+}
+
+.ImagenParcela h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 44px;
+    text-align: right;
+    padding: 0%;
+    top: 35%;
+    transform: translateX(-12%);
+    position: relative;
+    color: white;
+}
+
+/*  --- Estilos de Botones de campaña ---  */
+.BotonAñadir{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: list-item;
+    width: 280px;
+    height: 45px;
+    left: 25px;
+    top: 441px;
+    background: #8BFF63;
+    border-radius: 50px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+/*Propiedad para que al pasar el mouse cambie de fondo*/
+.BotonAñadir:hover{
+    background-color: black;
+    color: white;
+}
+
+.BotonModificar{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: list-item;
+    width: 280px;
+    height: 45px;
+    left: 25px;
+    top: 441px;
+    background: #FFE663;
+    border-radius: 50px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.BotonModificar:hover{
+    background-color: black;
+    color: white;
+}
+
+.BotonEliminar{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: list-item;
+    width: 280px;
+    height: 45px;
+    left: 25px;
+    top: 441px;
+    background: #FF6363;
+    border-radius: 50px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.BotonEliminar:hover{
+    background-color: black;
+    color: white;
+}
+
+.BotonSalir{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: list-item;
+    width: 140px;
+    height: 45px;
+    left: 25px;
+    top: 441px;
+    background: #F75757;
+    border-radius: 50px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.BotonSalir:hover{
+    background-color: white;
+    color: black;
+}
+
+/*Aca definimos un DIV para que no afecte el diseño de la Barra de navegacion*/
+.Espacio{
+    height: 65px;
+}
+
+/*Esto le da un filtro a la imagen de parcelas*/
+.Cover2{
+    background-color: rgba(0, 0, 0, .5); 
+}
+
+
+/* ------   Estilos de las parcelas ------ */
+/* Esta linea trae de internet el tipo de letra*/
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+/* Esto nos permite dar estilo a toda la pagina*/
+* {
+  box-sizing: border-box;
+}
+
+/* Esto nos permite dar estilo a todo lo que este en Body*/
+body {
+  background-color: #edeef6;
+  font-family: 'Poppins', sans-serif;
+  align-items: center;
+  text-align: center;
+}
+
+/* Esto nos permite que al pasar con el mouse cambie de color*/
+button:hover, button:active{
+    background-color: black;
+}

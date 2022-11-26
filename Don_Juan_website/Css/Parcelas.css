@@ -1,0 +1,459 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    text-align: center;
+}
+h1{
+    color: #fff;
+}
+.capa{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    z-index: -1;
+    top: 0;left: 0;
+}
+/*Estilos para el encabezado*/
+.header{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;left: 0;
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+.container .btn-menu, .logo{
+    float: left;
+    line-height:100px;
+}
+.container .btn-menu label{
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+.logo h1{
+    color: #fff;
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 10px;
+}
+.container .menu{
+    float: right;
+    line-height: 100px;
+}
+.container .menu a{
+    display: inline-block;
+    padding: 15px;
+    line-height: normal;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    margin-right: 5px;
+}
+.container .menu a:hover{
+    border-bottom: 2px solid #c7c7c7;
+    padding-bottom: 5px;
+}
+/*Fin de Estilos para el encabezado*/
+
+/*Menù lateral*/
+#btn-menu{
+    display: none;
+}
+.container-menu{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-menu:checked ~ .container-menu{
+    opacity: 1;
+    visibility: visible;
+}
+.cont-menu{
+    width: 100%;
+    max-width: 250px;
+    background: #1c1c1c;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+#btn-menu:checked ~ .container-menu .cont-menu{
+    transform: translateX(0%);
+}
+.cont-menu nav{
+    transform: translateY(15%);
+}
+.cont-menu nav a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+.cont-menu nav a:hover{
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+.cont-menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+/*Fin de Menù lateral*/
+/*estilo Menu lateral*/
+#side_nav{
+    background: #000;
+    min-width: 250px;
+    max-width: 250px;
+}
+
+.Content1{
+    min-height: 100vh;
+    width: 100%;
+}
+/*Con esta clase nos permite personalizar el fondo*/
+.home{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+/*Esto es un filtro que esta por encima de la imagen de fondo*/
+.cover{
+    width: 100%;
+    height: 100vh;
+    /*Tiene formato RGBA ya que si usamos "Opacity" se aplica a todos los elementos y solo quiero que se aplique en la imagen*/
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Con esta clase personalizamos la barra de navegacion*/
+.BarraNavegacion{
+    width: 100%;
+    display: flex;
+    /*Es recomendable utilizar multiplos de 8*/
+    height: 90px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 0 24px;
+    box-sizing: border-box;
+    position: fixed;
+    color: white;
+    font-family: 'Poppins', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index: 3;
+}
+
+/*Aca le damos formato al texto de la barra*/
+.BarraNavegacion a{
+    display: inline-flex;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+
+/*Aca le damos formato aL LOGO de la Barra*/
+.BarraNavegacion img{
+    height: 90px;
+}
+
+/*Aca le damos estilo a la barra inferior*/
+.BarraInferior{
+    width: 100%;
+    display: flex;
+    /*Es recomendable utilizar multiplos de 8*/
+    height: 70px;
+    text-align: right;
+    align-items: right;
+    justify-content: flex-end;
+    background-color: black;
+    padding: 0 24px;
+    box-sizing: border-box;
+    position: relative;
+    color: white;
+    font-family: 'Poppins', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index: 3;
+}
+
+/*Aca le damos estilo*/
+.Content{
+    background-color: rgba(217, 217, 217, 0.81);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+    border-radius: 30px;
+    width: 580px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    /*Se pueden linkeare mas fondos desde google fonts*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Content h1 {
+    font-size: 54px;
+}
+
+.coverImagen{
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+}
+
+.ImagenParcela{
+    background-image: url("../../imagenes/Campo.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 205px;
+    border: 10px;
+    position: relative;
+}
+
+.ImagenParcela::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.63);
+}
+
+.ImagenParcela h1{
+    font-family:  'Poppins', 'Calibri', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 44px;
+    text-align: right;
+    padding: 0%;
+    top: 35%;
+    transform: translateX(-12%);
+    position: relative;
+    color: white;
+}
+
+/*  --- Estilos de Botones de campaña ---  */
+.BotonAñadir{
+    font-family:  'Poppins', 'Calibri', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    display: list-item;
+    width: 280px;
+    height: 45px;
+    left: 25px;
+    top: 441px;
+    background: #8BFF63;
+    border-radius: 50px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.BotonAñadir:hover{
+    background-color: black;
+    color: white;
+}
+
+.BotonAñadir2{
+    font-family:  'Poppins', 'Calibri', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    display: list-item;
+    width: 280px;
+    height: 45px;
+    left: 25px;
+    top: 441px;
+    background: #63b4ff;
+    border-radius: 50px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+/*Propiedad para que al pasar el mouse cambie de fondo*/
+.BotonAñadir2:hover{
+    background-color: black;
+    color: white;
+}
+
+.BotonModificar{
+    font-family:  'Poppins', 'Calibri', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    display: list-item;
+    width: 280px;
+    height: 45px;
+    left: 25px;
+    top: 441px;
+    background: #FFE663;
+    border-radius: 50px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.BotonModificar:hover{
+    background-color: black;
+    color: white;
+}
+
+.BotonEliminar{
+    font-family:  'Poppins', 'Calibri', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    display: list-item;
+    width: 280px;
+    height: 45px;
+    left: 25px;
+    top: 441px;
+    background: #FF6363;
+    border-radius: 50px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.BotonEliminar:hover{
+    background-color: black;
+    color: white;
+}
+
+.BotonSalir{
+    font-family:  'Poppins', 'Calibri', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    display: list-item;
+    width: 140px;
+    height: 45px;
+    left: 25px;
+    top: 441px;
+    background: #F75757;
+    border-radius: 50px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.BotonSalir:hover{
+    background-color: white;
+    color: black;
+}
+
+/*Aca definimos un DIV para que no afecte el diseño de la Barra de navegacion*/
+.Espacio{
+    height: 65px;
+}
+
+/*Esto le da un filtro a la imagen de parcelas*/
+.Cover2{
+    background-color: rgba(0, 0, 0, .5); 
+}
+
+/* ------   Estilos de las parcelas ------ */
+/* Esta linea trae de internet el tipo de letra*/
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+/* Esto nos permite dar estilo a toda la pagina*/
+* {
+  box-sizing: border-box;
+}
+
+table{
+    text-align: left;
+    align-items: left;
+}
+
+/* Esto nos permite dar estilo a todo lo que este en Body*/
+/* body {
+  background-color: #edeef6;
+  font-family: 'Poppins', sans-serif;
+  align-items: center;
+  text-align: center;
+}
+*/
+/* Esto nos permite dar estilo a los botones*/
+
+table button {
+    background-color: #47a386;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 14px;
+    padding: 50px 30px;
+  }
+
+/* Esto nos permite que al pasar con el mouse cambie de color*/
+table button:hover, table button:active{
+    background-color: black;
+}
+
+
+/* Esto nos permite dar el formato de la Ventana Modal (Popup) dentro de la pagina*/
+.modal-container {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  pointer-events: none;
+  /* El Popup esta presente en la pagina, pero con Opacity lo oculta*/
+  opacity: 0;  
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: opacity 0.3s ease;
+}
+
+/* Esto nos permite que al hacer click muestre el Popup*/
+.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+/* Esto nos permite dar estilo dentro del Popup*/
+.modal {
+  background-color: #fff;
+  width: 600px;
+  max-width: 100%;
+  padding: 30px 50px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal h1 {
+  margin: 0;
+}
+
+.modal p {
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+/* Esto nos permite dar el mismo estilo del Popup a la pagina de "DescripcionParcelas.html"*/
+.Parrafo {
+    background-color: #fff;
+  width: 600px;
+  max-width: 100%;
+  padding: 30px 50px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}

@@ -1,0 +1,83 @@
+/*damos el estilo desde aca*/
+
+/* Login */
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Con esta clase nos permite personalizar el fondo*/
+.home{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../imagenes/FondoLogin.png");
+    background-size: cover;
+    background-position: center;
+
+}
+
+/*Esto es un filtro que esta por encima de la imagen de fondo*/
+.cover{
+    width: 100%;
+    height: 100vh;
+    /*Tiene formato RGBA ya que si usamos "Opacity" se aplica a todos los elementos y solo quiero que se aplique en la imagen*/
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Con esta clase personalizamos la barra de navegacion*/
+.BarraNavegacion{
+    width: 100%;
+    display: flex;
+    /*Es recomendable utilizar multiplos de 8*/
+    height: 72px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 0 24px;
+    box-sizing: border-box;
+    position: fixed;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.Content{
+    background-color: rgba(217, 217, 217, 0.81);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+    border-radius: 30px;
+    width: 580px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    /*Se pueden linkeare mas fondos desde google fonts*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Content h1 {
+    font-size: 54px;
+}
+
+.BotonIniciar{
+    width: 240px;
+    height: 48px;
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 24px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+/*Son los efectos del boton cuando se pasa por el mouse, importante poner la prop. "Cursor" y "Transition" en el boton*/
+.BotonIniciar:hover{
+    background-color: white;
+    color: black;
+}
+
+/* Fin de Login*/
